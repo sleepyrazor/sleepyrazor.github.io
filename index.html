@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Learn GitHub</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <h1><span style="color: #cdb4db;">Fast</span><span style="color: #a2d2ff;">Git</span></h1>
+    <h2>Use GitHub like a pro in minutes</h2>
+    <div class="botones">
+        <boton onclick="" id="download" class="download">Download</boton>
+        <boton onclick="upload()" id="upload" class="upload">Upload</boton>
+    </div>
+    <div id="download-explained" class="download-explained">
+        <boton onclick="aparecerBolas()" class="back"><</boton>
+        <p style="margin-right: 3.5em;">Inicializamos el repo</p>
+        <p class="code">git init</p>
+        <p>Añadimos el contenido de la carpeta actual</p>
+        <p class="code">git add .</p>
+        <p>Comentamos los cambios mediante un commit</p>
+        <p class="code">git commit -m "first commit"</p>
+        <p>Añadimos (solo la primera vez) el repositorio de la nube</p>
+        <p class="code">git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git</p>
+        <p>Subimos el contenido del repositorio local a un repositorio central</p>
+        <p>Aclaración del -u, lo usamos para que la rama remota "reconozca" la rama local y así en futuros push, o pulls, no haya que especificar la rama, simplemente usaremos git push</p>
+        <p class="code">git push -u origin master</p>
+        <button onclick="copyToClipboard()" id="clipboard" class="clipboard">📋</button>
+    </div>
+    <div id="upload-explained" class="upload-explained">
+        <boton onclick="aparecerBolas()" class="boton"><</boton>
+        <p>git init</p>
+        <p>git add .</p>
+        <p>git commit -m "first commit"</p>
+        <p>git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git</p>
+        <p>git push -u origin master</p>
+    </div>
+    
+
+    <script>
+        var downloadButton = document.getElementById('download');
+        var uploadButton = document.getElementById('upload');
+        var downloadText = document.getElementById('download-explained');
+        var uploadText = document.getElementById('upload-explained');
+        uploadText.style.display="none";
+        downloadText.style.display="none";
+
+        function desaparecerBolas(){
+            downloadButton.style.display="none";
+            uploadButton.style.display="none";
+        }
+        function aparecerBolas(){
+            downloadButton.style.display="block";
+            uploadButton.style.display="block";
+            uploadText.style.display = "none";
+            downloadText.style.display = "none";
+        }
+
+        function download(){
+            
+            desaparecerBolas();
+            if(downloadText.style.display=="none"){
+                downloadText.style.display = "block";
+                uploadText.style.display = "none";
+            }else {
+                downloadText.style.display="none";
+                uploadText.style.display = "block";
+            }
+        }
+        function upload(){
+            desaparecerBolas();
+            if(uploadText.style.display=="none"){
+                uploadText.style.display = "block";
+                downloadText.style.display = "none";
+            }else {
+                uploadText.style.display="none";
+                downloadText.style.display = "block";
+            }
+        }
+
+        
+        document.addEventListener("DOMContentLoaded", function(){
+            downloadButton.addEventListener("click", function () {
+                downloadButton.style.animationPlayState = "running";
+                setTimeout(function () {
+                    download();
+                }, 480);
+            })
+        })
+
+        function copyToClipboard(){
+            let str = 'git init\n'+'git commit -m "first commit"\n'+'git remote add origin';
+            var clip = document.getElementById('clipboard');
+            navigator.clipboard.writeText(str)
+            clip.style.backgroundColor = "rgb(57, 255, 70)";
+        }
+
+    </script>
+</body>
+</html>
