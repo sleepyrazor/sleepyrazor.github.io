@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">.lw { font-size: 60px; color: red;font-weight: bold;}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+}</style>
+
+
+<title>HTML, CSS and JavaScript demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Start your code here -->
+<h1>CALENTADA DE INVIERNO 2023</h1>
+<h2>¡Cada día hasta el 24 de Diciembre tendrás nuevas sorpresas en esta web!</h2>
+<h3>Dedicada a la más <b style="font-weight:bold;color:red">guarra(san)</b></h3>
+<h1>Test de Amor</h1>
+<p>calificacion actual:<b id="value">0</b></p>
+<h3>Si fueses mama noel este año y tuvieses que regalar a todos los niños algo que le regalarias a los africanos</h3>
+<button onclick="ak()">Un ak47</button>
+<button onclick="samaritana()">500 kg de comida anuales</button>
+<button onclick="fotoCulo()">Una fotoculo</button>
+<img id="aver" src="https://pbs.twimg.com/media/EMRMbf9X0AUwAYS.jpg" style="display: none;">
+<h1>ADVERTENCIA PREGUNTA HOT</h1>
+<h3>Si tuvieses una cama pegada a la pared, ¿elegirias dormir pegada a la pared o dormir en el filo?</h3>
+<button onclick="follada()">Pegada a la pared</button>
+<button onclick="llorar()">En el filo</button>
+
+
+<!-- End your code here -->
+
+<script>// Write JavaScript here
+// Crear un elemento h1
+    
+    var calificacion = document.getElementById("value");
+    var calificacionInicial = 0;
+    calificacion.innerHTML = calificacionInicial;
+    var aver = document.getElementById("aver");
+    aver.style.display = 'none';
+    function follada(){
+        calificacionInicial+=4434;
+        calificacion.innerHTML = calificacionInicial;
+        var nuevoH1 = document.createElement('h1');
+
+        // Agregar texto al elemento h1
+        var texto = document.createTextNode('te follaba toa uwu');
+        nuevoH1.appendChild(texto);
+
+        // Agregar el elemento h1 al cuerpo del documento
+        document.body.appendChild(nuevoH1);
+
+
+    }
+    function llorar(){
+        calificacionInicial--;
+        calificacion.innerHTML = calificacionInicial;
+        var nuevoH1 = document.createElement('h1');
+
+        // Agregar texto al elemento h1
+        var texto = document.createTextNode('prefieres que te coma el visho de la oscuridá');
+        nuevoH1.appendChild(texto);
+
+        // Agregar el elemento h1 al cuerpo del documento
+        document.body.appendChild(nuevoH1);
+
+
+    }
+    function samaritana(){
+        calificacionInicial--;
+        calificacion.innerHTML = calificacionInicial;
+        var nuevoH1 = document.createElement('h1');
+
+        // Agregar texto al elemento h1
+        var texto = document.createTextNode('ooooh que buena samaritana');
+        nuevoH1.appendChild(texto);
+
+        // Agregar el elemento h1 al cuerpo del documento
+        document.body.appendChild(nuevoH1);
+
+
+    }
+    function ak(){
+        calificacionInicial--;
+        calificacion.innerHTML = calificacionInicial;
+        var nuevoH1 = document.createElement('h1');
+
+        // Agregar texto al elemento h1
+        var texto = document.createTextNode('ak akakak');
+        nuevoH1.appendChild(texto);
+
+        // Agregar el elemento h1 al cuerpo del documento
+        document.body.appendChild(nuevoH1);
+
+
+    }
+    function fotoCulo(){
+        calificacionInicial+= 100;
+        calificacion.innerHTML = calificacionInicial;
+        aver.style.display = 'block';
+
+
+    }</script></body>
