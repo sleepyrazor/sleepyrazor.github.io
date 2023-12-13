@@ -15,30 +15,45 @@ body {
 </head>
 <body>
 <!-- Start your code here -->
-<h1>CALENTADA DE INVIERNO 2023</h1>
-<h2>¡Cada día hasta el 24 de Diciembre tendrás nuevas sorpresas en esta web!</h2>
+<h1>CALENTADA DE INVIERNO 2023 <b id="edicion" style="color:green">II</b></h1>
+<h2>¡Quedan 11 sorpresas en esta web!</h2>
 <h3>Dedicada a la más <b style="font-weight:bold;color:red">guarra(san)</b></h3>
-<h1>Test de Amor</h1>
+La temática de ayer era más romantíca, en cambio hoy tornó a picante.
+<h2>Reglas del día de hoy:</h2>
+<ol>
+  <li>Terminar el test y enviar foto de la puntuación</li>
+  <li>Si llegas a 69 de puntuación, enviar una foto(culo) bomba de tu gusto por ig.</li>
+  <li>Deseame una feliz navidad</li>
+  <li>Feliz navidad para ti tambien</li>
+</ol>
+<h1>Test de Picardía I</h1>
 <p>calificacion actual:<b id="value">0</b></p>
-<h3>Si fueses mama noel este año y tuvieses que regalar a todos los niños algo que le regalarias a los africanos</h3>
-<button onclick="ak()">Un ak47</button>
-<button onclick="samaritana()">500 kg de comida anuales</button>
-<button onclick="fotoCulo()">Una fotoculo</button>
+<h3>¿Qué prefieres Kebab con patatas o patatas dentro del propio kebab</h3>
+<button onclick="kebabMal()">Kebab con patatas</button>
+<button onclick="kebab()">Patatas dentro de patatas</button>
+<h3>Supongamos que Papa Noel(yo) ha abierto un kebab en el polo Norte. Tú, mi mejor alumna hasta la fecha deberáis saber donde prefiero la salsa. ¿Donde prefiero la salsa?</h3>
+<button onclick="kebabMal()">Kebab</button>
+<button onclick="kebab()">Patatas</button>
+<button onclick="otro()">Otro lugar</button>
+<input id="input" style="display: none;">
+
 <img id="aver" src="https://pbs.twimg.com/media/EMRMbf9X0AUwAYS.jpg" style="display: none;">
-<h1>ADVERTENCIA PREGUNTA HOT</h1>
-<h3>Si tuvieses una cama pegada a la pared, ¿elegirias dormir pegada a la pared o dormir en el filo?</h3>
-<button onclick="follada()">Pegada a la pared</button>
-<button onclick="llorar()">En el filo</button>
 
 
+<h3>una vez acabes, recuerda terminar los 4 pasos de arriba :)</h3>
 <!-- End your code here -->
 
 <script>// Write JavaScript here
 // Crear un elemento h1
-    
+    var kebabgood = false
     var calificacion = document.getElementById("value");
     var calificacionInicial = 0;
+    var input = document.getElementById("input");
+    input.style.display = 'none';
     calificacion.innerHTML = calificacionInicial;
+    var edition = document.getElementById("edicion");
+    var edicion = "II";
+    edition.innerHTML = edicion;
     var aver = document.getElementById("aver");
     aver.style.display = 'none';
     function follada(){
@@ -69,13 +84,13 @@ body {
 
 
     }
-    function samaritana(){
+    function kebabMal(){
         calificacionInicial--;
         calificacion.innerHTML = calificacionInicial;
         var nuevoH1 = document.createElement('h1');
 
         // Agregar texto al elemento h1
-        var texto = document.createTextNode('ooooh que buena samaritana');
+        var texto = document.createTextNode('las pataatas siempre mejor dentro.');
         nuevoH1.appendChild(texto);
 
         // Agregar el elemento h1 al cuerpo del documento
@@ -83,13 +98,16 @@ body {
 
 
     }
-    function ak(){
-        calificacionInicial--;
+    function kebab(){
+        if(kebabgood==false){
+            calificacionInicial+= 30;
+            kebabgood=true;
+        }
         calificacion.innerHTML = calificacionInicial;
         var nuevoH1 = document.createElement('h1');
 
         // Agregar texto al elemento h1
-        var texto = document.createTextNode('ak akakak');
+        var texto = document.createTextNode('sabrosa');
         nuevoH1.appendChild(texto);
 
         // Agregar el elemento h1 al cuerpo del documento
@@ -102,5 +120,10 @@ body {
         calificacion.innerHTML = calificacionInicial;
         aver.style.display = 'block';
 
+
+    }
+    function otro(){
+        calificacionInicial +=39;
+        input.style.display = 'block';
 
     }</script></body>
