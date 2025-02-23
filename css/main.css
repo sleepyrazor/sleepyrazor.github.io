@@ -1,0 +1,184 @@
+:root {
+    --color-primary: #D81B60;
+    /* Rosa intenso - inspirado en el logo de Nana */
+    --color-secondary: #3C3C3C;
+    /* Gris oscuro - estilo punk y rockero */
+    --color-accent: #9C27B0;
+    /* Púrpura vibrante - inspirado en el estilo de Nana Osaki */
+    --color-light: #F5F5F5;
+    /* Blanco humo - para fondos suaves */
+    --color-dark: #212121;
+    /* Negro profundo - para contrastes fuertes */
+    --color-yellow: #ffd500;
+    /* Inspirado en el amarillo de la llave del 707 */
+
+}
+
+/* Clases de colores */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.text-accent {
+    color: var(--color-accent) !important;
+}
+
+.text-light {
+    color: var(--color-light) !important;
+}
+
+.text-dark {
+    color: var(--color-dark) !important;
+}
+
+.text-yellow {
+    color: var(--color-yellow) !important;
+}
+
+/* Clases de fondos */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.bg-accent {
+    background-color: var(--color-accent) !important;
+}
+
+.bg-light {
+    background-color: var(--color-light) !important;
+}
+
+.bg-dark {
+    background-color: var(--color-dark) !important;
+}
+
+.bg-yellow {
+    background-color: var(--color-yellow) !important;
+}
+
+/* Botones inspirados en Nana */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b3154a;
+    /* Un tono más oscuro al pasar el cursor */
+}
+
+.btn-yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background-color: #b3154a;
+    /* Un tono más oscuro al pasar el cursor */
+    color: var(--color-light);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #2a2a2a;
+}
+
+ul.nav {
+    font-weight: bold;
+}
+.nav li {
+    position: relative; /* Esto hace que los hijos con position absolute se ubiquen respecto a él */
+}
+.nav .logo {
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin: 0px;
+}
+
+.nav-link {
+    margin-top: 5px;
+}
+
+.nav li:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border-radius: 50px;
+}
+
+.imagen-hover {
+    position: absolute;
+    top: -40px;
+    left: 15px;
+    width: 40px;
+    height: 30px;
+    color: var(--color-light);
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.nav li:hover .imagen-hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+p {
+    font-family: "Sour Gummy", serif;
+    font-size: 1.2em;
+}
+
+.pink-shadow {
+
+    background-color: var(--color-light);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+.purple-shadow {
+
+    background-color: var(--color-light);
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+strong {
+    color: var(--color-accent);
+}
+
+.japones {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5em;
+    color: var(--color-accent);
+}
