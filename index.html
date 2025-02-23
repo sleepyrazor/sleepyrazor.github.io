@@ -1,136 +1,275 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Learn GitHub</title>
+    <title>NaNa by AI Yazawa</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/game.css'>
+    <script src="js/phaser.js"></script>
+    <script defer src='js/bootstrap.bundle.js'></script>
+    <link rel="icon" href="img/loto.jpg" type="image/png">
 </head>
+
 <body>
-    <h1><span style="color: #cdb4db;">Fast</span><span style="color: #a2d2ff;">Git</span></h1>
-    <h2>Use GitHub like a pro in minutes</h2>
-    <div class="botones">
+    <div class="container my-5">
+        <header class="p-3 bg-secondary ">
+            <div class="container" bis_skin_checked="1">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+                    bis_skin_checked="1">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
 
-        <boton onclick="" id="download" class="download">Download</boton>
-        <boton onclick="" id="upload" class="upload">Upload</boton>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="text-secondary">
+                                <img class="logo" src="img/logo.png" alt="NaNa">
+                            </a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Serie<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Manga<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <li><a href="personajes.html" class="nav-link px-2 text-white">Personajes<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Ai Yazawa<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control-dark bg-light" placeholder="Takumi es..."
+                            aria-label="Search">
+                    </form>
+
+                    <div class="text-end" bis_skin_checked="1">
+                        <button type="button" class="btn btn-outline-light me-2">Login</button>
+                        <button type="button" class="btn btn-primary">Sign-up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
 
 
+        <main>
+
+            <article class="pink-shadow bg-light p-5 my-5 rounded ">
+                <h1 class=""><strong>NaNa</strong> vuelve del hiatus por su 25º aniversario</h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/kazenban.jpg" width="300px" height="400px" alt="NaNa kazenban" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <p class="text-justify text-body-secondary">La revista <strong>Cookie </strong>de Shueisha ha
+                            anunciado que el manga NaNa de Ai Yazawa volverá del
+                            hiatus en 2025, debido a su cuarto de siglo como manga. Además, la editorial ha confirmado
+                            que Ai Yazawa retomará la serialización con nuevos capítulos para conmemorar el 25.º
+                            aniversario de la obra. Aunque no se han revelado detalles específicos sobre la trama o la
+                            cantidad de capítulos previstos, los fanáticos de <strong>Nana</strong> han expresado su
+                            entusiasmo en redes sociales tras años de espera.
+
+                            Shueisha también ha anunciado una serie de eventos y publicaciones especiales en honor a la
+                            celebración, incluyendo reediciones del manga, mercancía exclusiva y una posible adaptación
+                            en formato digital. Se espera que en los próximos meses se revelen más detalles sobre el
+                            regreso de la serie y el estado de salud de la autora, quien tuvo que detener la publicación
+                            en 2009 debido a problemas de salud.
+
+                            El regreso de <strong>Nana</strong> es un acontecimiento muy esperado dentro de la comunidad
+                            del manga y el anime, ya que la historia de las dos protagonistas, Nana Osaki y Nana
+                            Komatsu, dejó una huella profunda en los lectores por su enfoque maduro y realista sobre la
+                            amistad, el amor y la música. </p>
+                        <p class="text-justify text-body-secondary japones">
+                            タクミはファンの間で非常に嫌われているキャラクターなので、彼が斬首されるのを待っています。</p>
+
+                    </div>
+                </div>
+            </article>
+            <h1 class="text-center big-title">Minijuegos</h1>
+            <article class="purple-shadow bg-dark">
+                <h1 class="text-white">Mata a Takumi</h1>
+                <div id="game">
+                    <script>
+
+                        function generarFresasAleatorias(scene) {
+                            for (let i = 0; i < 20; i++) {
+                                let x = Math.random() * scene.scale.width;
+                                let y = Math.random() * scene.scale.height;
+                                let fresa = scene.add.image(x, y, 'fresawin').setOrigin(0.5).setScale(0.5);
+                                scene.tweens.add({
+                                    targets: fresa,
+                                    y: y - 100,
+                                    duration: 1000,
+                                    repeat: -1,
+                                    yoyo: true,
+                                    ease: 'Sine.easeInOut',
+                                    delay: i * 100
+                                });
+                            }
+                        }
+                        function reproducirSonido(scene, sonido) {
+                            let sonidoGolpe = scene.sound.add(sonido); // Añadir el sonido
+                            if (sonido == 'nanaAudio') {
+                                sonidoGolpe.setVolume(1).play(); // Ajustar volumen y reproducir
+                            } else {
+                                sonidoGolpe.setVolume(Math.random()).play(); // Ajustar volumen y reproducir
+                            }
+                        }
+
+                        if (window.innerWidth >= 800) {
+                            const config = {
+                                type: Phaser.AUTO, // Usa WebGL si está disponible, si no, Canvas
+                                width: '100%',
+                                height: '100%',
+                                parent: 'game', // Asigna el juego al div con id 'game'
+                                scene: {
+                                    preload: preload,
+                                    create: create,
+                                    update: update
+                                },
+                                scale: {
+                                    mode: Phaser.Scale.RESIZE,
+                                    autoCenter: Phaser.Scale.CENTER_BOTH
+                                }
+                            };
+
+                            const game = new Phaser.Game(config);
+                            let vida = 5; // Variable para la vida del jugador
+
+                            function preload() {
+                                this.load.image('takumi', 'img/tak1.png');
+                                this.load.image('takumi2', 'img/tak2.png');
+                                this.load.image('takumi3', 'img/tak3.png');
+                                this.load.image('takumi4', 'img/tak4.png');
+                                this.load.image('takumi5', 'img/tak5.png');
+                                this.load.image('mazo', 'img/mazo1.png');
+                                this.load.image('mazo2', 'img/mazo2.png');
+                                this.load.image('mazo3', 'img/mazo3.png');
+                                this.load.audio('hit', 'sound/hit.wav');
+                                this.load.audio('ouch', 'sound/ouch.wav');
+                                this.load.audio('victory', 'sound/victory.wav');
+                                this.load.image('nanawin1', 'img/nanaWin.png');
+                                this.load.image('nanawin2', 'img/nanaWin2.png');
+                                this.load.image('fresawin', 'img/fresaWin.png');
+                                this.load.audio('nanaAudio', 'sound/nanaaudio.mp3');
+
+                            }
+
+                            function create() {
+                                this.input.setDefaultCursor('none');
+
+                                this.takumi = this.add.image(this.scale.width / 2, this.scale.height / 2, 'takumi');
+                                this.takumi.setInteractive();
+
+
+
+
+                                // Cursor personalizado (mazo)
+                                this.cursor = this.add.image(0, 0, 'mazo').setOrigin(0.5).setDepth(100).setScale(0.25);
+                                this.textures.get('mazo').setFilter(Phaser.Textures.FilterMode.NEAREST);
+
+
+                                this.input.on('pointermove', (pointer) => {
+                                    this.cursor.setPosition(pointer.x, pointer.y);
+                                });
+
+                                this.input.on('pointerdown', (pointer) => { // click
+                                    reproducirSonido(this, 'hit');
+
+                                    this.cursor.setTexture('mazo2').setOrigin(0.5).setDepth(100).setScale(0.25);
+                                    this.textures.get('mazo2').setFilter(Phaser.Textures.FilterMode.NEAREST);
+
+                                    setTimeout(() => {
+                                        setTimeout(() => {
+                                            this.cursor.setTexture('mazo').setOrigin(0.5).setDepth(100).setScale(0.25);
+                                            this.textures.get('mazo').setFilter(Phaser.Textures.FilterMode.NEAREST);
+                                        }, 100);
+                                        this.cursor.setTexture('mazo3').setOrigin(0.5).setDepth(100).setScale(0.25);
+                                        this.textures.get('mazo3').setFilter(Phaser.Textures.FilterMode.NEAREST);
+                                    }, 100);
+
+                                    if (Phaser.Geom.Rectangle.Contains(this.takumi.getBounds(), pointer.x, pointer.y)) {
+                                        reproducirSonido(this, 'ouch');
+
+                                        vida--;
+                                        this.vidaText.setText(`Vida: ${vida}`); // Actualiza la vida en pantalla
+                                        console.log('¡Topo aplastado! Vida restante:', vida);
+                                    }
+                                });
+
+                                this.vidaText = this.add.text(20, 20, `Vida: ${vida}`, {
+                                    fontSize: '32px',
+                                    fill: '#fff',
+                                    fontFamily: 'Arial',
+                                    backgroundColor: '#000'
+                                });
+                            }
+
+                            function update() {
+                                // Lógica para hacer que el topo aparezca/desaparezca aquí
+                                let offset = 300;
+                                if (vida <= 0) {
+                                    reproducirSonido(this, 'nanaAudio');
+                                    this.add.image(this.scale.width / 2 - offset, this.scale.height / 2 + offset, 'nanawin1').setOrigin(0.5);
+                                    this.add.image(this.scale.width / 2 + offset, this.scale.height / 2 + offset, 'nanawin2').setOrigin(0.5);
+                                    generarFresasAleatorias(this);
+                                    this.scene.pause();
+                                    this.add.text(this.scale.width / 2, this.scale.height / 2, '¡Has salvado al Mundo de Takumi!', {
+                                        fontSize: '64px',
+                                        fill: '#fff',
+                                        fontFamily: 'Arial',
+                                        backgroundColor: '#0f0',
+                                        color: '#0f0'
+                                    }).setOrigin(0.5);
+                                    this.input.setDefaultCursor('auto');
+                                }
+                                if (vida == 4) {
+                                    this.takumi.setTexture('takumi2'); // Cambia al siguiente sprite
+                                }
+                                if (vida == 3) {
+                                    this.takumi.setTexture('takumi3'); // Cambia al siguiente sprite
+                                }
+                                if (vida == 2) {
+                                    this.takumi.setTexture('takumi4'); // Cambia al siguiente sprite
+                                }
+                                if (vida == 1) {
+                                    this.takumi.setTexture('takumi5'); // Cambia al siguiente sprite
+                                }
+
+
+
+
+                            }
+                        } else {
+                            document.getElementById('game').innerHTML = '<p>El juego solo está disponible en pantallas de al menos 800 píxeles de ancho.</p>';
+                        }
+
+
+
+                    </script>
+
+                </div>
+            </article>
+        </main>
+
+
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3 bg-secondary">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Serie</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Manga</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Personajes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Ai Yazawa</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Company, Manduel</p>
+        </footer>
     </div>
-    <div id="download-explained" class="download-explained">
-        <boton onclick="aparecerBolas()" class="back"><</boton>
 
-        <p style="margin-right: 3.5em;">Inicializamos el repo</p>
-        <p class="code">git init</p>
-        <p>Añadimos el contenido de la carpeta actual</p>
-        <p class="code">git add .</p>
-        <p>Comentamos los cambios mediante un commit</p>
-        <p class="code">git commit -m "first commit"</p>
-        <p>Añadimos (solo la primera vez) el repositorio de la nube</p>
-        <p class="code">git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git</p>
-        <p>Subimos el contenido del repositorio local a un repositorio central</p>
-        <p>Aclaración del -u, lo usamos para que la rama remota "reconozca" la rama local y así en futuros push, o pulls, no haya que especificar la rama, simplemente usaremos git push</p>
-        <p class="code">git push -u origin master</p>
-        <button onclick="copyToClipboardDownload()" id="clipboard" class="clipboard">📋</button>
-    </div>
-    <div id="upload-explained" class="upload-explained">
-        <boton onclick="aparecerBolas()" class="back"><</boton>
-        <p style="margin-right: 3.5em;">Creamos una branch nueva</p>
-        <p class="code">git branch nombre</p>
-        <p>Unimos la branch nueva con la main</p>
-        <p class="code">git merge nombreRama</p>
-        <p>Una vez hecho esto, ya estarían subidos los cambios. Ahora solo faltaría que los demás se descargaran
-            los cambios mediante un fetch.
-        </p>
-        <p class="code">git fetch branch</p>
-        
-        <button onclick="copyToClipboardUpload()" id="clipboard2" class="clipboard">📋</button>
-    </div>
-    
-    <p class="byMe">made by <hi>sleepyrazor</hi></p>
-
-
-
-
-    <script>
-        var downloadButton = document.getElementById('download');
-        var uploadButton = document.getElementById('upload');
-        var downloadText = document.getElementById('download-explained');
-        var uploadText = document.getElementById('upload-explained');
-        uploadText.style.display="none";
-        downloadText.style.display="none";
-
-        function desaparecerBolas(){
-            downloadButton.style.display="none";
-            uploadButton.style.display="none";
-        }
-        function aparecerBolas(){
-            downloadButton.style.display="inline-block";
-            uploadButton.style.display="inline-block";
-            uploadText.style.display = "none";
-            downloadText.style.display = "none";
-        }
-
-        function download(){
-            
-            desaparecerBolas();
-            if(downloadText.style.display=="none"){
-                downloadText.style.display = "block";
-                uploadText.style.display = "none";
-            }else {
-                downloadText.style.display="none";
-                uploadText.style.display = "block";
-            }
-        }
-        function upload(){
-            desaparecerBolas();
-            if(uploadText.style.display=="none"){
-                uploadText.style.display = "block";
-                downloadText.style.display = "none";
-            }else {
-                uploadText.style.display="none";
-                downloadText.style.display = "block";
-            }
-        }
-        document.addEventListener("DOMContentLoaded", function(){
-            downloadButton.addEventListener("click", function () {
-                downloadButton.style.animationPlayState = "running";
-                setTimeout(function () {
-                    download();
-                    downloadButton.style.animationPlayState = "paused";
-                }, 480);
-                
-            })
-        })
-        document.addEventListener("DOMContentLoaded", function(){
-            uploadButton.addEventListener("click", function () {
-                uploadButton.style.animationPlayState = "running";
-                setTimeout(function () {
-                    upload();
-                    uploadButton.style.animationPlayState = "paused";
-                }, 480);
-                
-            })
-        })
-
-        function copyToClipboardDownload(){
-            let str = 'git init\n'+'git commit -m "first commit"\n'+'git remote add origin';
-            var clip = document.getElementById('clipboard');
-            navigator.clipboard.writeText(str)
-            clip.style.backgroundColor = "rgb(57, 255, 70)";
-        }
-
-        function copyToClipboardUpload(){
-            let str = 'git branch newBranch\n'+'git merge newBranch\n';
-            var clip = document.getElementById('clipboard2');
-            navigator.clipboard.writeText(str)
-            clip.style.backgroundColor = "rgb(57, 255, 70)";
-        }
-
-    </script>
 </body>
+
 </html>
