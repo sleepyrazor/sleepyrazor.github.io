@@ -1,0 +1,11 @@
+
+
+.personaje-card {
+    height: 15%;
+    width: 100%;
+    
+}
+.card {
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(56, 47, 58, 0.2);
+}

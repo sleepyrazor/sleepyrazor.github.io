@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Efecto Hover</title>
+  <style>
+    .contenedor {
+      position: relative; /* Para que los elementos absolutos se posicionen respecto a este */
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .imagen-hover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none; /* Oculta la imagen por defecto */
+      width: 100px; /* Ajusta el tamaño según necesites */
+    }
+    .contenedor:hover .imagen-hover {
+      display: block; /* Muestra la imagen cuando se hace hover sobre el contenedor */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    Pasa el ratón por aquí.
+    <img src="img/star.png" alt="Imagen en hover" class="imagen-hover">
+  </div>
+</body>
+</html>

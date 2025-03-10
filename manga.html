@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Personajes de Nana</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/game.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/personajes.css'>
+    <script src="js/phaser.js"></script>
+    <script defer src='js/bootstrap.bundle.js'></script>
+    <link rel="icon" href="img/loto.jpg" type="image/png">
+</head>
+
+<body>
+    <div class="container my-5">
+        <header class="p-3 bg-secondary ">
+            <div class="container" bis_skin_checked="1">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+                    bis_skin_checked="1">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="index.html" class="text-secondary">
+                                <img class="logo" src="img/logo.png" alt="NaNa">
+                            </a></li>
+                        <li><a href="serie.html" class="nav-link px-2 text-white">Serie<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <li><a href="manga.html" class="nav-link px-2 text-white">Manga<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <li><a href="personajes.html" class="nav-link px-2 text-white">Personajes<img
+                                    src="img/fresa.png" alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <li><a href="aiyazawa.html" class="nav-link px-2 text-white">Ai Yazawa<img src="img/fresa.png"
+                                    alt="Imagen en hover" class="imagen-hover"></a></li>
+                        <button type="button" class="btn btn-lg btn-danger bg-primary" data-bs-toggle="popover"
+                            title="Sobre mí"
+                            data-bs-content="Que hay de nuevo amigos, soy Manuel revuelta, muchos me conocerán como mrketchup">
+                            Sobre mi
+                        </button>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control-dark bg-light" placeholder="Takumi es..."
+                            aria-label="Search">
+                    </form>
+
+                    <!-- Botón en el header -->
+                    <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="loginModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Iniciar sesión</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="email" class="form-control mb-3" placeholder="Correo electrónico">
+                                    <input type="password" class="form-control" placeholder="Contraseña">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Entrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="text-center">Manga de Nana</h1>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="img/manga.jpg" alt="Manga de Nana" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="text-justify">Nana es un manga escrito e ilustrado por Ai Yazawa. Fue publicado en la
+                        revista
+                        Cookie de la editorial Shūeisha desde 2000 hasta 2009. La historia sigue a dos jóvenes llamadas
+                        Nana
+                        que se encuentran en un tren con destino a Tokio. A pesar de tener personalidades muy
+                        diferentes,
+                        ambas comparten el mismo nombre y deciden compartir un apartamento en la ciudad. La serie ha
+                        sido
+                        adaptada a una serie de anime y dos películas live-action.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3 bg-secondary">
+                <li class="nav-item"><a href="serie.html" class="nav-link px-2 text-white">Serie</a></li>
+                <li class="nav-item"><a href="manga.html" class="nav-link px-2 text-white">Manga</a></li>
+                <li class="nav-item"><a href="personajes.html" class="nav-link px-2 text-white">Personajes</a></li>
+                <li class="nav-item"><a href="aiyazawa.html" class="nav-link px-2 text-white">Ai Yazawa</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Company, Manduel</p>
+        </footer>
+    </div>
+</body>
+
+</html>
